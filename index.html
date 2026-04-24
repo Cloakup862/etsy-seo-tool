@@ -1,115 +1,64 @@
- <title>Etsy SEO Tag Generator</title>
-    <meta
-      name="description"
-      content="Generate 13 Etsy SEO tags from a product title and description."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap"
-      rel="stylesheet"
-      content="Generate 13 long-tail Etsy SEO tags from a product title and description."
-    />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <main class="page">
-      <section class="hero">
-        <p class="eyebrow">Minimal web app</p>
-        <span class="eyebrow">Static SEO tool</span>
-        <h1>Etsy SEO Tag Generator</h1>
-        <p class="intro">
-          Paste a product title and description to generate 13 natural Etsy tags
-          shaped around buyer-intent phrases, long-tail searches, and a
-          comma-separated list you can paste directly into your workflow.
-          Turn a product title and description into 13 natural, buyer-intent
-          Etsy tags with long-tail keyword variations you can copy in one click.
-        </p>
-        <div class="hero-pills">
-          <span>13 tags</span>
-          <span>Buyer intent focused</span>
-          <span>Ready for Vercel or Render</span>
-        </div>
-      </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Etsy SEO Tag Generator</title>
 
-      <section class="app-card">
-        <form id="seo-form" class="seo-form">
-          <div class="panel-heading">
-            <p class="results-label">Input</p>
-            <h2>Describe the product</h2>
-          <div class="section-copy">
-            <h2>Product details</h2>
-            <p>
-              Include the product type, recipient, personalization, material,
-              style, and gifting occasion for stronger tag suggestions.
-            </p>
-          </div>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
 
-          <label class="field">
-              name="title"
-              type="text"
-              maxlength="140"
-              placeholder="Example: Handmade soy candle gift for mom"
-              placeholder="Example: Personalized teacher tote bag with floral name design"
-              required
-            />
-          </label>
-            <textarea
-              id="description"
-              name="description"
-              rows="8"
-              placeholder="Describe materials, audience, style, occasion, use case, and anything shoppers might search for."
-              rows="7"
-              placeholder="Describe the recipient, occasion, material, style, and how buyers would use it."
-              required
-            ></textarea>
-          </label>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-          <p class="field-hint">
-            Include the product type, audience, personalization, materials,
-            style, and gift context for stronger search phrases.
-          </p>
+<body>
+  <main class="page">
 
-          <div class="actions">
-            <button type="submit" class="primary-button">Generate 13 Tags</button>
+    <section class="hero">
+      <h1>Etsy SEO Tag Generator</h1>
+      <p>
+        Generate 13 high-converting Etsy tags based on real buyer search intent.
+      </p>
+    </section>
 
-        <section class="results" aria-live="polite">
-          <div class="results-header">
-            <div>
-              <p class="results-label">Output</p>
-              <h2>Your Etsy tags</h2>
-            <div class="section-copy">
-              <h2>Suggested tags</h2>
-              <p id="helper-text">
-                Your 13 long-tail Etsy tags will appear here after you submit the form.
-              </p>
-            </div>
-            <button type="button" id="copy-button" class="copy-button" disabled>
-              Copy comma-separated tags
-            <button type="button" id="copy-button" class="primary-button" disabled>
-              Copy Tags
-            </button>
-          </div>
+    <section class="app-card">
+      <form id="seo-form">
 
-          <p id="helper-text" class="helper-text">
-            Your 13 optimized tags will appear here after you submit the form.
-          </p>
+        <h2>Product Info</h2>
 
-          <ol id="tag-list" class="tag-list"></ol>
-          <ul id="tag-list" class="tag-list"></ul>
+        <input
+          id="title"
+          type="text"
+          placeholder="Personalized teacher tote bag"
+          required
+        />
 
-          <label class="field output-field">
-          <label class="field">
-            <span>Comma-separated output</span>
-            <textarea
-              id="comma-output"
-              rows="4"
-              readonly
-              placeholder="tag one, tag two, tag three"
-              placeholder="personalized teacher tote bag, teacher appreciation gift tote, floral canvas teacher tote..."
-            ></textarea>
-          </label>
-        </section>
-script.js
+        <textarea
+          id="description"
+          placeholder="Describe your product, audience, material, and use case..."
+          required
+        ></textarea>
+
+        <button type="submit">Generate Tags</button>
+
+      </form>
+
+      <div class="results">
+        <h2>Generated Tags</h2>
+
+        <ul id="tag-list"></ul>
+
+        <textarea id="comma-output" readonly></textarea>
+
+        <button id="copy-button">Copy Tags</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
         
